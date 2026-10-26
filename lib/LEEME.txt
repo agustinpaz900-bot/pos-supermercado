@@ -1,0 +1,1 @@
+Coloca aqui ojdbc11.jar (driver JDBC de Oracle). Descargalo de oracle.com o de Maven Central. 
