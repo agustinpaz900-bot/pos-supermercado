@@ -1,0 +1,11 @@
+-- Ejecutar conectado como SYSTEM (una sola vez).
+ALTER SESSION SET CONTAINER = XEPDB1;
+
+CREATE USER pos IDENTIFIED BY pos123
+  DEFAULT TABLESPACE users QUOTA UNLIMITED ON users;
+GRANT CREATE SESSION, CREATE TABLE, CREATE SEQUENCE, CREATE VIEW TO pos;
+
+-- Usuario aparte para las pruebas con base de datos (PruebasBD), para no ensuciar los datos reales
+CREATE USER pos_test IDENTIFIED BY pos123
+  DEFAULT TABLESPACE users QUOTA UNLIMITED ON users;
+GRANT CREATE SESSION, CREATE TABLE, CREATE SEQUENCE, CREATE VIEW TO pos_test;

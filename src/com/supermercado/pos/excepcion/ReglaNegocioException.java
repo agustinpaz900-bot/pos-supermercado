@@ -1,0 +1,6 @@
+package com.supermercado.pos.excepcion;
+
+/** Se lanza cuando se viola una regla de negocio (RN-xx). El mensaje se muestra al usuario. */
+public class ReglaNegocioException extends RuntimeException {
+    public ReglaNegocioException(String mensaje) { super(mensaje); }
+}
